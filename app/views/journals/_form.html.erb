@@ -1,0 +1,89 @@
+<%= form_for(@journal) do |f| %>
+  <% if @journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+
+      <ul>
+      <% @journal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subject_id %><br>
+    <%= f.text_field :subject_id %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :full_journal_title %><br>
+    <%= f.text_field :full_journal_title %>
+  </div>
+  <div class="field">
+    <%= f.label :jcr_abbreviated_title %><br>
+    <%= f.text_field :jcr_abbreviated_title %>
+  </div>
+  <div class="field">
+    <%= f.label :issn %><br>
+    <%= f.text_field :issn %>
+  </div>
+  <div class="field">
+    <%= f.label :total_cites %><br>
+    <%= f.number_field :total_cites %>
+  </div>
+  <div class="field">
+    <%= f.label :journal_impact_factor %><br>
+    <%= f.text_field :journal_impact_factor %>
+  </div>
+  <div class="field">
+    <%= f.label :impact_factor_without_journal_self_cites %><br>
+    <%= f.text_field :impact_factor_without_journal_self_cites %>
+  </div>
+  <div class="field">
+    <%= f.label :five_years_impact_factor %><br>
+    <%= f.text_field :five_years_impact_factor %>
+  </div>
+  <div class="field">
+    <%= f.label :immediacy_index %><br>
+    <%= f.text_field :immediacy_index %>
+  </div>
+  <div class="field">
+    <%= f.label :citable_items %><br>
+    <%= f.number_field :citable_items %>
+  </div>
+  <div class="field">
+    <%= f.label :cited_half_life %><br>
+    <%= f.text_field :cited_half_life %>
+  </div>
+  <div class="field">
+    <%= f.label :citing_half_life %><br>
+    <%= f.text_field :citing_half_life %>
+  </div>
+  <div class="field">
+    <%= f.label :eigenfactor_score %><br>
+    <%= f.text_field :eigenfactor_score %>
+  </div>
+  <div class="field">
+    <%= f.label :article_influence_score %><br>
+    <%= f.text_field :article_influence_score %>
+  </div>
+  <div class="field">
+    <%= f.label :article_in_citable_items %><br>
+    <%= f.text_field :article_in_citable_items %>
+  </div>
+  <div class="field">
+    <%= f.label :average_journal_impact_factor_percentile %><br>
+    <%= f.text_field :average_journal_impact_factor_percentile %>
+  </div>
+  <div class="field">
+    <%= f.label :normalized_eigenfactor %><br>
+    <%= f.text_field :normalized_eigenfactor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

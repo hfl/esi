@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Journals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Rank</th>
+      <th>Full journal title</th>
+      <th>Jcr abbreviated title</th>
+      <th>Issn</th>
+      <th>Total cites</th>
+      <th>Journal impact factor</th>
+      <th>Impact factor without journal self cites</th>
+      <th>Five years impact factor</th>
+      <th>Immediacy index</th>
+      <th>Citable items</th>
+      <th>Cited half life</th>
+      <th>Citing half life</th>
+      <th>Eigenfactor score</th>
+      <th>Article influence score</th>
+      <th>Article in citable items</th>
+      <th>Average journal impact factor percentile</th>
+      <th>Normalized eigenfactor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journals.each do |journal| %>
+      <tr>
+        <td><%= journal.subject %></td>
+        <td><%= journal.rank %></td>
+        <td><%= journal.full_journal_title %></td>
+        <td><%= journal.jcr_abbreviated_title %></td>
+        <td><%= journal.issn %></td>
+        <td><%= journal.total_cites %></td>
+        <td><%= journal.journal_impact_factor %></td>
+        <td><%= journal.impact_factor_without_journal_self_cites %></td>
+        <td><%= journal.five_years_impact_factor %></td>
+        <td><%= journal.immediacy_index %></td>
+        <td><%= journal.citable_items %></td>
+        <td><%= journal.cited_half_life %></td>
+        <td><%= journal.citing_half_life %></td>
+        <td><%= journal.eigenfactor_score %></td>
+        <td><%= journal.article_influence_score %></td>
+        <td><%= journal.article_in_citable_items %></td>
+        <td><%= journal.average_journal_impact_factor_percentile %></td>
+        <td><%= journal.normalized_eigenfactor %></td>
+        <td><%= link_to 'Show', journal %></td>
+        <td><%= link_to 'Edit', edit_journal_path(journal) %></td>
+        <td><%= link_to 'Destroy', journal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Journal', new_journal_path %>

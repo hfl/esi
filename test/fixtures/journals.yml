@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject_id: 
+  rank: 1
+  full_journal_title: MyString
+  jcr_abbreviated_title: MyString
+  issn: MyString
+  total_cites: 1
+  journal_impact_factor: 9.99
+  impact_factor_without_journal_self_cites: 9.99
+  five_years_impact_factor: 9.99
+  immediacy_index: 9.99
+  citable_items: 1
+  cited_half_life: MyString
+  citing_half_life: MyString
+  eigenfactor_score: 9.99
+  article_influence_score: 9.99
+  article_in_citable_items: 9.99
+  average_journal_impact_factor_percentile: 9.99
+  normalized_eigenfactor: 9.99
+
+two:
+  subject_id: 
+  rank: 1
+  full_journal_title: MyString
+  jcr_abbreviated_title: MyString
+  issn: MyString
+  total_cites: 1
+  journal_impact_factor: 9.99
+  impact_factor_without_journal_self_cites: 9.99
+  five_years_impact_factor: 9.99
+  immediacy_index: 9.99
+  citable_items: 1
+  cited_half_life: MyString
+  citing_half_life: MyString
+  eigenfactor_score: 9.99
+  article_influence_score: 9.99
+  article_in_citable_items: 9.99
+  average_journal_impact_factor_percentile: 9.99
+  normalized_eigenfactor: 9.99

@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @journal.subject %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @journal.rank %>
+</p>
+
+<p>
+  <strong>Full journal title:</strong>
+  <%= @journal.full_journal_title %>
+</p>
+
+<p>
+  <strong>Jcr abbreviated title:</strong>
+  <%= @journal.jcr_abbreviated_title %>
+</p>
+
+<p>
+  <strong>Issn:</strong>
+  <%= @journal.issn %>
+</p>
+
+<p>
+  <strong>Total cites:</strong>
+  <%= @journal.total_cites %>
+</p>
+
+<p>
+  <strong>Journal impact factor:</strong>
+  <%= @journal.journal_impact_factor %>
+</p>
+
+<p>
+  <strong>Impact factor without journal self cites:</strong>
+  <%= @journal.impact_factor_without_journal_self_cites %>
+</p>
+
+<p>
+  <strong>Five years impact factor:</strong>
+  <%= @journal.five_years_impact_factor %>
+</p>
+
+<p>
+  <strong>Immediacy index:</strong>
+  <%= @journal.immediacy_index %>
+</p>
+
+<p>
+  <strong>Citable items:</strong>
+  <%= @journal.citable_items %>
+</p>
+
+<p>
+  <strong>Cited half life:</strong>
+  <%= @journal.cited_half_life %>
+</p>
+
+<p>
+  <strong>Citing half life:</strong>
+  <%= @journal.citing_half_life %>
+</p>
+
+<p>
+  <strong>Eigenfactor score:</strong>
+  <%= @journal.eigenfactor_score %>
+</p>
+
+<p>
+  <strong>Article influence score:</strong>
+  <%= @journal.article_influence_score %>
+</p>
+
+<p>
+  <strong>Article in citable items:</strong>
+  <%= @journal.article_in_citable_items %>
+</p>
+
+<p>
+  <strong>Average journal impact factor percentile:</strong>
+  <%= @journal.average_journal_impact_factor_percentile %>
+</p>
+
+<p>
+  <strong>Normalized eigenfactor:</strong>
+  <%= @journal.normalized_eigenfactor %>
+</p>
+
+<%= link_to 'Edit', edit_journal_path(@journal) %> |
+<%= link_to 'Back', journals_path %>

@@ -1,0 +1,2 @@
+json.extract! journal, :id, :subject_id, :rank, :full_journal_title, :jcr_abbreviated_title, :issn, :total_cites, :journal_impact_factor, :impact_factor_without_journal_self_cites, :five_years_impact_factor, :immediacy_index, :citable_items, :cited_half_life, :citing_half_life, :eigenfactor_score, :article_influence_score, :article_in_citable_items, :average_journal_impact_factor_percentile, :normalized_eigenfactor, :created_at, :updated_at
+json.url journal_url(journal, format: :json)
