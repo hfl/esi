@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Subject:</strong>
-  <%= @journal.subject %>
+  <strong>所属学科：</strong>
+  <%= link_to @journal.subject.title, subject_path %>
 </p>
 
 <p>
@@ -90,5 +90,3 @@
   <%= @journal.normalized_eigenfactor %>
 </p>
 
-<%= link_to 'Edit', edit_journal_path(@journal) %> |
-<%= link_to 'Back', journals_path %>

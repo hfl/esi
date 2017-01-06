@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>学科：</strong>
   <%= @subject.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>关于：</strong>
   <%= @subject.content %>
 </p>
 
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+<p><strong>期刊种数：</strong><%= @subject.journal_size %></p>
+<p><strong>影响因子总值：</strong><%= @subject.sum_impact %></p>
+<p><strong>影响因子平均值</strong><%= @subject.av_impact %></p>
+
+<%= link_to '学科所属期刊', subject_journals_path(@subject) %> |
+<%= link_to '返回', subjects_path %>

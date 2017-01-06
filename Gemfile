@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 
 gem 'roo'
 gem 'rails_admin', '~> 1.0'
+gem 'rails_admin-i18n'
+gem 'rails-i18n'
 gem 'devise'
+gem 'puma'
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

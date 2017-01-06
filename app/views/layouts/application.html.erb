@@ -1,14 +1,91 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Esi</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ESI 论文索引</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="/css/flat-ui.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
   <%= csrf_meta_tags %>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand" href="/">ESI 论文查询</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-01">
+        <ul class="nav navbar-nav">
+          <li><a href="/">首页</a></li>
+          <li class="active"><%= link_to "全部学科索引", subjects_path %></li>
+        </ul>
+        <form class="navbar-form navbar-right" action="/search" role="search" method="get">
+          <div class="form-group">
+            <div class="input-group">
+              <select class="form-control select select-primary select-block mbl" name="path">
+                <optgroup label="选择检索途径">
+                  <option value="0">期刊名字</option>
+                  <option value="1">ISSN</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="input-group">
+              <input class="form-control" id="navbarInput-01" name="keyword" type="search" placeholder="Search">
+              <span class="input-group-btn">
+                <button type="submit" class="btn"><span class="fui-search"></span></button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </nav><!-- /navbar -->
+        <%= yield %>
+    </div>
+    <!-- /.container -->
 
-<%= yield %>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-7">
+            <h3 class="footer-title">关于</h3>
+            <p>本系统由内蒙古大学图书馆文献数字化中心提供，更多支持请访问<a href="http://lib.imu.edu.cn">内蒙古
+            大学图书馆</a>。
+            </p>
+         </div> <!-- /col-xs-7 -->
 
-</body>
+          <div class="col-xs-5">
+            <div class="footer-banner">
+              <h3 class="footer-title">更多资源</h3>
+              <ul>
+                <li><%= link_to '内蒙古大学', 'http://www.imu.edu.cn/' %></li>
+                <li>内蒙古大学图书馆</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="/js/vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/vendor/video.js"></script>
+    <script src="/js/flat-ui.min.js"></script>
+
+  </body>
 </html>

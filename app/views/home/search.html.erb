@@ -1,0 +1,19 @@
+<h2>期刊检索</h2>
+<div>
+  <% if @journals == 'nokeyword' %>
+  <p>请检查检索条件：没有填写检索词，填写正确后请重新检索。</p>
+  <% else %>
+    <% if @journals.size > 0 %>
+    <ul>
+      <% @journals.each do |journal|%>
+      <li><%= link_to journal.full_journal_title, subject_journal_path(journal.subject.id, journal) %></li>
+      <% end %>
+    </ul>
+      <div>
+      <%= paginate @journals %>
+      </div>
+    <% else %>
+    <p>没有相关期刊，请修正相关检索条件，然后重新检索。</p>
+    <%end%>
+  <% end %>
+</div>
