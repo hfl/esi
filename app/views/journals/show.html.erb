@@ -2,7 +2,7 @@
 
 <p>
   <strong>所属学科：</strong>
-  <%= link_to @journal.subject.title, subject_path %>
+  <%= link_to @journal.subject.title, subject_path(@journal.subject.id) %>
 </p>
 
 <p>

@@ -10,7 +10,7 @@ require 'roo'
 
 # add datas to subject.
 
-x_subj = Roo::Spreadsheet.open("/home/hfl/projects/ruby/ruby2.3.3/rails/esi/db/0.xlsx")
+x_subj = Roo::Spreadsheet.open("/home/hfl/projects/rb/rails/esi/db/0.xlsx")
 
 2.upto(23).each do |r|
   subj = x_subj.sheet(0).row(r)
@@ -22,7 +22,7 @@ puts 'Subject Imported.'
 # add journals
 
 1.upto(22) do |n|
-  xlsx = Roo::Spreadsheet.open('/home/hfl/projects/ruby/ruby2.3.3/rails/esi/db/' + n.to_s + '.xlsx')
+  xlsx = Roo::Spreadsheet.open('/home/hfl/projects/rb/rails/esi/db/' + n.to_s + '.xlsx')
 
   puts lr = xlsx.sheet(0).last_row - 2
 
